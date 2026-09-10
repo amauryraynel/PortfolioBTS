@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -80,7 +80,6 @@
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> HTML</a>
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> CSS</a>
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> C#</a>
-      <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> GIT</a>
     </div>
   </div>
 

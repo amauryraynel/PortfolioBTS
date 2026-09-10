@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -37,7 +37,7 @@
     <h2>Amaury Raynel</h2>
     <h3>ÉTUDIANT BTS SIO - SLAM</h3>
     <div class="accueil-actions">
-		<a href="CV.pdf" target="_blank" class="noopener noreferrer">Mon CV <span>↗</span></a>
+      <a href="/chemin/vers/Amaury_Raynel_CV.pdf" class="primary-btn" download>Mon CV <span>↗</span></a>
       <a href="#contact" class="secondary-btn">Contactez moi <span>↗</span></a>
     </div>
   </div>
@@ -80,7 +80,6 @@
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> HTML</a>
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> CSS</a>
       <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> C#</a>
-      <a href="#" class="skill-btn"><span class="skill-icon">&lt;/&gt;</span> GIT</a>
     </div>
   </div>
 

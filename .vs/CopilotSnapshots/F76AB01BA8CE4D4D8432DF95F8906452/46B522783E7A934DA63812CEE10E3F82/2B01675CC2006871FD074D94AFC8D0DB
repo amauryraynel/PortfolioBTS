@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --white: #ffffff;
   --sky: #eaf8ff;
   --sky-soft: #d5f1ff;
@@ -243,9 +243,10 @@ body::before {
 
 .accueil-actions {
   display: flex;
-  gap: 1rem;
+  gap: 1.6rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+  align-items: center;
 }
 
 #accueil a,
@@ -536,11 +537,75 @@ button {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
+#accueil a,
+button {
+  color: #f0faff;
+}
+
+/* Style du bouton principal (Mon CV) */
+#accueil a.primary-btn {
+  background: linear-gradient(90deg, #39a4ff 0%, #3ea7e8 100%);
+  border: none;
+  color: #012036;
+  box-shadow: 0 8px 20px rgba(58, 164, 255, 0.18);
+  padding: 0.95rem 1.8rem;
+}
+
+/* Style du bouton secondaire (Contact) */
+#accueil a.secondary-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e8f4ff;
+  box-shadow: 0 6px 16px rgba(2, 12, 24, 0.3);
+  padding: 0.85rem 1.6rem;
+}
+
+#accueil .secondary-btn {
+  background: rgba(6, 20, 35, 0.62);
+  border: 1px solid rgba(161, 224, 255, 0.6);
+  color: #f0faff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 16px rgba(58, 164, 255, 0.2);
+}
+
 #accueil a:hover,
 article a:hover,
 button:hover {
   transform: translateY(-2px);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 20px rgba(58, 164, 255, 0.35);
+}
+
+/* Survol pour primary/secondary personnalisés */
+#accueil a.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(58, 164, 255, 0.28);
+}
+
+#accueil a.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(2, 12, 24, 0.35);
+}
+
+/* Sur petits écrans : empile les boutons */
+@media (max-width: 640px) {
+  .accueil-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #accueil a.primary-btn,
+  #accueil a.secondary-btn {
+    width: 100%;
+  }
+}
+
+/* Enlever le petit encadré interne pour le bouton principal (Mon CV) */
+#accueil a.primary-btn {
+  /* Retire la bordure interne (inset) visible comme petit rectangle */
+  box-shadow: 0 0 16px rgba(58, 164, 255, 0.2);
+}
+
+#accueil a.primary-btn:hover {
+  box-shadow: 0 0 20px rgba(58, 164, 255, 0.35);
 }
 
 #accueil a span {
