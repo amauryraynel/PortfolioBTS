@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -209,8 +209,7 @@
 
 
 <form id="contactForm" action="https://formsubmit.co/amaurytennis@gmail.com" method="POST">
-  <input type="hidden" id="_subject" name="_subject" value="Nouveau message depuis le portfolio" />
-  <input type="hidden" id="_replyto" name="_replyto" value="" />
+  <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio" />
   <input type="hidden" name="_captcha" value="false" />
 
   <div class="contact-row">
@@ -267,27 +266,9 @@
   const successMessage = document.querySelector('.form-success');
 
   if (contactForm && successMessage) {
-    contactForm.addEventListener('submit', (e) => {
-      // Remplir dynamiquement le sujet et le reply-to pour voir les valeurs dans l'email reçu
-      const inputNom = document.getElementById('nom');
-      const inputEmail = document.getElementById('email');
-      const inputMessage = document.getElementById('message');
-
-      const subjectField = document.getElementById('_subject');
-      const replytoField = document.getElementById('_replyto');
-
-      if (inputNom && inputEmail && inputMessage && subjectField && replytoField) {
-        // Inclure le nom et l'email dans le sujet pour qu'ils soient visibles directement
-        const trimmedMessage = inputMessage.value.trim().replace(/\s+/g, ' ');
-        const preview = trimmedMessage.length > 80 ? trimmedMessage.slice(0, 77) + '...' : trimmedMessage;
-        subjectField.value = `Message de ${inputNom.value} <${inputEmail.value}> : ${preview}`;
-        replytoField.value = inputEmail.value;
-      }
-
-      // Laisser la soumission suivre son cours, puis afficher le message de succès
+    contactForm.addEventListener('submit', () => {
       successMessage.style.display = 'block';
-      // Réinitialiser le formulaire après un court délai pour laisser le navigateur soumettre
-      setTimeout(() => contactForm.reset(), 1000);
+      contactForm.reset();
     });
   }
 </script>
